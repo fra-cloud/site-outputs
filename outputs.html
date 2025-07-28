@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Outputs</title>
+  <link rel="stylesheet" href="css/style.css">
+
+<style>
+.menu-toggle {
+  display: none;
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-open .nav-links {
+    display: flex;
+  }
+}
+</style>
+
+<script>
+function toggleMenu() {
+  document.body.classList.toggle('nav-open');
+}
+</script>
+
+</head>
+<body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+<nav class="nav-links">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="social.html">Social</a>
+  </nav>
+  <h1>Outputs</h1>
+  <ul>
+    <li><a href="projets/projet-alpha.html">Projet Alpha</a> (2023, installation)</li>
+    <li><a href="projets/projet-beta.html">Projet Beta</a> (2024, performance)</li>
+      <li><a href="projets/projet-gamma.html">Projet Gamma</a> (2025, installation multimédia)</li>
+</ul>
+</body>
+</html>

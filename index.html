@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="css/style.css">
+
+<style>
+.menu-toggle {
+  display: none;
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-open .nav-links {
+    display: flex;
+  }
+}
+</style>
+
+<script>
+function toggleMenu() {
+  document.body.classList.toggle('nav-open');
+}
+</script>
+
+</head>
+<body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+<nav class="nav-links">
+    <a href="about.html">About</a> |
+    <a href="outputs.html">Outputs</a> |
+    <a href="social.html">Social</a>
+  </nav>
+  <h1>Bienvenue</h1>
+  <p>Site statique inspiré de Cory Arcangel.</p>
+</body>
+</html>
