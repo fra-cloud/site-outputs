@@ -1,64 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projet Gamma</title>
   <link rel="stylesheet" href="../css/style.css">
-
-<style>
-.menu-toggle {
-  display: none;
-  font-size: 1.2em;
-  background: none;
-  border: none;
-  padding: 0.5em;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-open .nav-links {
-    display: flex;
-  }
-}
-</style>
-
-<script>
-function toggleMenu() {
-  document.body.classList.toggle('nav-open');
-}
-</script>
-
+  <style>
+    .menu-toggle {
+      display: none;
+      font-size: 1.2em;
+      background: none;
+      border: none;
+      padding: 0.5em;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0.5em;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-open .nav-links {
+        display: flex;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      document.body.classList.toggle('nav-open');
+    }
+  </script>
 </head>
 <body>
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-<nav class="nav-links">
-    <a href="../index.html">Home</a> |
-    <a href="../about.html">About</a> |
-    <a href="../outputs.html">Outputs</a> |
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../outputs.html">Outputs</a>
     <a href="../social.html">Social</a>
   </nav>
+
   <h1>Projet Gamma</h1>
   <p>2025 — Installation multimédia</p>
-  <p>Ce projet explore la relation entre image, espace et perception. Il a été présenté pour la première fois à Bruxelles en 2025.</p>
-
-  <h2>Galerie</h2>
-  <div class="gallery">
-    <img src="../img/image1.jpg" alt="Image 1">
-    <img src="../img/image2.jpg" alt="Image 2">
-    <img src="../img/image3.jpg" alt="Image 3">
-  </div>
-
-  <a href="https://exemple.com">Voir le projet en ligne</a>
+  <p>Ce projet explore la relation entre image, espace et perception.</p>
+  <a href="https://exemple.com">Voir en ligne</a>
 </body>
 </html>
