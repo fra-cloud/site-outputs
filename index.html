@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,48 +6,79 @@
   <title>Accueil</title>
   <link rel="stylesheet" href="css/style.css">
 
-<style>
-.menu-toggle {
-  display: none;
-  font-size: 1.2em;
-  background: none;
-  border: none;
-  padding: 0.5em;
-  cursor: pointer;
-}
+  <style>
+    .menu-toggle {
+      display: none;
+      font-size: 1.2em;
+      background: none;
+      border: none;
+      padding: 0.5em;
+      cursor: pointer;
+    }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 0.5em;
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0.5em;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-open .nav-links {
+        display: flex;
+      }
+    }
+
+    /* Petit style pour le lien random */
+    .random-link {
+      display: inline-block;
+      margin-top: 1em;
+      font-size: 1em;
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .random-link:hover {
+      color: darkblue;
+    }
+  </style>
+
+  <script>
+  function toggleMenu() {
+    document.body.classList.toggle('nav-open');
   }
 
-  .menu-toggle {
-    display: block;
+  // Fonction pour aller sur une page aléatoire
+  function goToRandomPage() {
+    const pages = [
+      "about.html",
+      "outputs.html",
+      "ping.html"
+    ];
+    const randomPage = pages[Math.floor(Math.random() * pages.length)];
+    window.location.href = randomPage;
   }
-
-  .nav-open .nav-links {
-    display: flex;
-  }
-}
-</style>
-
-<script>
-function toggleMenu() {
-  document.body.classList.toggle('nav-open');
-}
-</script>
-
+  </script>
 </head>
+
 <body>
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-<nav class="nav-links">
+
+  <nav class="nav-links">
     <a href="about.html">About</a>
     <a href="outputs.html">Outputs</a>
     <a href="ping.html">Ping</a>
   </nav>
-  <h1>You are here !</h1>
-  <p>Francesco Biasi's website - under reflection </p>
+
+  <h1>You are here!</h1>
+  <p>Francesco Biasi's website — under reflection</p>
+
+  <!-- Lien aléatoire -->
+  <a class="random-link" onclick="goToRandomPage()">→ Go to a random page</a>
+
 </body>
 </html>
